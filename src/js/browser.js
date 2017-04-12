@@ -345,6 +345,11 @@ $(function(){
      $webview[0].request.onBeforeSendHeaders.addListener(
         function(details) {
           if (authorization) {
+	    if (authorization == 'googlerobot'){
+              chrome.identity.getAuthToken(function(access_token){});
+	      authorization = 'Bearer ' + access_token;
+	    }
+	    console.log(authorization);
             details.requestHeaders.push({name: 'Authorization', value: authorization})
           }
           return {requestHeaders: details.requestHeaders};
