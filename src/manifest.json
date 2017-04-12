@@ -24,11 +24,22 @@
       "listen": "*"
     }
   },
+  "oauth2": {
+    "client_id": "660101861151-fn9oh2jmni9cia03l2lkmujnrtohr5kd.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/calendar",
+      "https://www.googleapis.com/auth/plus.me",
+      "https://www.googleapis.com/auth/drive",
+      "https://sites.google.com/feeds/",
+      "https://www.googleapis.com/auth/userinfo.email"
+    ]
+  },
   "permissions": [
     "<all_urls>",
     "system.display",
     "system.network",
     "power",
+    "identity",
     "webview",
     "alwaysOnTopWindows",
     "storage",
